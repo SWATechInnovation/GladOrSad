@@ -15,9 +15,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: Prevent file change
-          uses: xalvarez/prevent-file-change-action@v1.6.0
-          with:
-            githubToken: ${{ secrets.GITHUB_TOKEN }}
-            pattern: GoogleService-Info\.plist
-            allowNewFiles: false
+        uses: xalvarez/prevent-file-change-action@v1.6.0
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          pattern: GoogleService-Info\.plist
+          allowNewFiles: false
       - run: echo "🍏 This job's status is ${{ job.status }}."
